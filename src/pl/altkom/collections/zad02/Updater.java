@@ -11,6 +11,7 @@ public class Updater {
         for (Employee emp : employees){
             emp.setSalary(emp.getSalary()*1.1);
         }
+        //employees.replaceAll(emp -> emp.setSalary(emp.getSalary()*1.1));
 
         for (Employee e : employees) {
             System.out.println(e);

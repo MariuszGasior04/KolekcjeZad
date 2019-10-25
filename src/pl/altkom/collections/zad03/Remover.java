@@ -10,6 +10,9 @@ public class Remover {
         // dodaj kod, który usunie wszystkich pracowników,
         // którzy zarabiają więcej niż 5000
         // skorzystaj z funkcji removeIf
+
+        employees.removeIf(n -> (n.getSalary()>5000));
+
         for (Employee e : employees) {
             System.out.println(e);
         }
