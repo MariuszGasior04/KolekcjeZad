@@ -7,8 +7,11 @@ import java.util.List;
 public class Updater {
     public static void main(String[] args) {
         List<Employee> employees = Employee.createEmployees();
-        // dodaj kod, który da każdemu pracownikowi 10% podwyżki
-        // skorzystaj z funkcji replaceAll
+
+        for (Employee emp : employees){
+            emp.setSalary(emp.getSalary()*1.1);
+        }
+
         for (Employee e : employees) {
             System.out.println(e);
         }
