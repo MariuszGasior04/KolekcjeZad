@@ -1,5 +1,6 @@
 package pl.altkom.collections;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -40,16 +41,24 @@ public class Employee {
     }
 
     public static List<Employee> createEmployees() {
-        return Arrays.asList(
-                new Employee("Paweł", "Bogdan", 3000),
-                new Employee("Adam", "Mickiewicz", 5000),
-                new Employee("Juliusz", "Słowacki", 6000),
-                new Employee("Adam", "Mickiewicz", 5000),
-                new Employee("Jan", "Kowalski", 2000),
-                new Employee("Anna", "Nowak", 4000),
-                new Employee("Maria", "Konopnicka", 6500),
-                new Employee("Eliza", "Orzeszkowa", 2500),
-                new Employee("Emilia", "Plater", 2220)
-        );
+        ArrayList<Employee> result = new ArrayList<>();
+        result.add(new Employee("Paweł", "Bogdan", 3000));
+        result.add(new Employee("Adam", "Mickiewicz", 5000));
+        result.add(new Employee("Juliusz", "Słowacki", 6000));
+        result.add(new Employee("Adam", "Mickiewicz", 5000));
+        result.add(new Employee("Jan", "Kowalski", 2000));
+        result.add(new Employee("Anna", "Nowak", 4000));
+        result.add(new Employee("Maria", "Konopnicka", 6500));
+        result.add(new Employee("Eliza", "Orzeszkowa", 2500));
+        result.add(new Employee("Emilia", "Plater", 2220));
+        return result;
+    }
+    public int compareTo(Employee employee){
+        int res1 = employee.firstName.compareTo(firstName);
+        if (res1 == 0 ){
+            return employee.lastName.compareTo(lastName);
+        } else {
+            return res1;
+        }
     }
 }
