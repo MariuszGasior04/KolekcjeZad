@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
     private final String firstName;
     private final String lastName;
     private double salary;
@@ -53,6 +53,7 @@ public class Employee {
         result.add(new Employee("Emilia", "Plater", 2220));
         return result;
     }
+
     public int compareTo(Employee employee){
         int res1 = employee.firstName.compareTo(firstName);
         if (res1 == 0 ){
