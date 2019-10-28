@@ -28,7 +28,7 @@ public class ONPCalculator {
         for(String object : onp){
             if(isInteger(object)) {
                 stackONP.push(Integer.parseInt(object));
-            }else if (operatory.contains(object)){
+            }else if(operatory.contains(object)){
                 Integer b = stackONP.pop();
                 Integer a = stackONP.pop();
                 if (object == "-"){
